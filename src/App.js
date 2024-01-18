@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import EventPage from './pages/EventPage/EventPage'
+import Footer from './components/Footer/Footer';
+import links from './config/links';
+import { TotalPagesProvider } from './context/TotalPagesContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TotalPagesProvider apiEndpoint={links.apiEndpoint}>
+      <div className="App">
+        <Header />
+        <EventPage />
+        <Footer />
+      </div>
+    </TotalPagesProvider>
   );
 }
 
