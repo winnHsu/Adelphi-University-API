@@ -20,12 +20,12 @@ export default function HeaderBottomRow() {
 
     return (
         <div className="header-bottom-row">
-            <div className={`header-logo ${isScrolled ? 'smaller-logo' : ''}`} >
+            <a href={links.linkHome} className={`header-logo ${isScrolled ? 'smaller-logo' : ''}`} >
                 <img
                     src={logo_au}
                     alt="Adelphi University logo"
                 />
-            </div>
+            </a>
             <div className="flexible-spacer" />
             <div>
                 <a href={links.linkAbout} className="header-black-title">Meet Adelphi</a>
